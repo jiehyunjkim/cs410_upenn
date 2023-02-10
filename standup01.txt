@@ -1,99 +1,34 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2636
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red16\green60\blue192;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c6667\c33333\c80000;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# STANDUP 01 - 2/9/2023 TEAM UPenn
+General Update and Intro
+======================================================================
+The project leader is Jenna Kim, and our members are Alexander Choe, Dhruv Shah, and Thuytien Chu.
 
-\f0\fs28 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 # STANDUP 01 - 2/9/2023 TEAM UPenn
-\f1\fs24 \
+BACKGROUND 
+Our team is working with a lab at Penn to phenotype carotid artery calcific atherosclerotic plaque. This essentially means to identify the observable traits of plaque made of fats, cholesterol, and other substances in the carotid artery, the main artery leading from the heart to the brain. This plaque buildup has been identified as one of the leading causes of ischemic stroke, or stroke caused by a lack of blood to the brain due to embolism (blood clots). Our project is to design a machine learning classification model to be able to identify calcific atherosclerotic plaque in CTA (computed tomographic angiography) scans, determine features of interest such as size, number, and location, and if possible, estimate if a plaque is symptomatic or asymptomatic and generate an associated risk score.
 
-\f0\fs28 General Update and Intro
-\f1\fs24 \
+The Github repo: https://github.com/jiehyunjkim/cs410_upenn
 
-\f0\fs28 ======================================================================
-\f1\fs24 \
 
-\f0\fs28 The project leader is Jenna Kim, and our members are Alexander Choe, Dhruv Shah, and Thuytien Chu.
-\f1\fs24 \
-\
+Draft of Requirements
+=======================================================================
+MAIN: We will design the classification model that gives the best result to detect atherosclerotic plaque in the carotid artery of the neck. Then estimate symptomatic vs. asymptomatic plaque in these places to generate a risk score.
 
-\f0\fs28 BACKGROUND\'a0
-\f1\fs24 \
+For technologies, we propose:
+* Python, Jupyter notebook, Unet, SwinUNETR
+* Exploring another architecture (Mona, kerasi)
 
-\f0\fs28 Our team is working with a lab at Penn to phenotype carotid artery calcific atherosclerotic plaque. This essentially means to identify the observable traits of plaque made of fats, cholesterol, and other substances in the carotid artery, the main artery leading from the heart to the brain. This plaque buildup has been identified as one of the leading causes of ischemic stroke, or stroke caused by a lack of blood to the brain due to embolism (blood clots). Our project is to design a machine learning classification model to be able to identify calcific atherosclerotic plaque in CTA (computed tomographic angiography) scans, determine features of interest such as size, number, and location, and if possible, estimate if a plaque is symptomatic or asymptomatic and generate an associated risk score.
-\f1\fs24 \
-\
+Current Questions / Problems / Something you need
+=======================================================================
+* We need to get access to the datasets
+* Create chimera account
+* Need to setup chimera environment
+* While working on Monai based Swin-UNETR, faced a lot of errors since it’s a new architecture and not much documentation is available.
+* Question: Is there a way to identify whether a calcific plaque is symptomatic or asymptomatic? What would a symptomatic/asymptomatic calcific plaque look like?
+->several studies report that there are no big differences between symptomatic and asymptomatic carotid arteries. But current machine learning technology for calcific plaque detection is promising.
 
-\f0\fs28 The Github repo: {\field{\*\fldinst{HYPERLINK "https://github.com/jiehyunjkim/cs410_upenn"}}{\fldrslt 
-\fs32 \cf3 \ul \ulc3 \strokec3 https://github.com/jiehyunjkim/cs410_upenn}}
-\f1\fs24 \
-\
-\
+List of Working Packages with responsible Students and Completion Dates
+======================================================================
+* Explore Keras-Unet-collection swin_unet_2d [Jenna] by 2/17
+* Explore Monai-Unet swin_unet_3d [Dhruv] by 2/17
+* Set up chimera environment and obtain access to datasets [Alex] by 2/15
 
-\f0\fs28 Draft of Requirements
-\f1\fs24 \
-
-\f0\fs28 =======================================================================
-\f1\fs24 \
-
-\f0\fs28 MAIN: We will design the classification model that gives the best result to detect atherosclerotic plaque in the carotid artery of the neck. Then estimate symptomatic vs. asymptomatic plaque in these places to generate a risk score.
-\f1\fs24 \
-\
-
-\f0\fs28 For technologies, we propose:
-\f1\fs24 \
-
-\f0\fs28 * Python, Jupyter notebook, Unet, SwinUNETR
-\f1\fs24 \
-
-\f0\fs28 * Exploring another architecture (Mona, kerasi)
-\f1\fs24 \
-\
-
-\f0\fs28 Current Questions / Problems / Something you need
-\f1\fs24 \
-
-\f0\fs28 =======================================================================
-\f1\fs24 \
-
-\f0\fs28 * We need to get access to the datasets
-\f1\fs24 \
-
-\f0\fs28 * Create chimera account
-\f1\fs24 \
-
-\f0\fs28 * Need to setup chimera environment
-\f1\fs24 \
-
-\f0\fs28 * While working on Monai based Swin-UNETR, faced a lot of errors since it\'92s a new architecture and not much documentation is available.
-\f1\fs24 \
-
-\f0\fs28 * Question: Is there a way to identify whether a calcific plaque is symptomatic or asymptomatic? What would a symptomatic/asymptomatic calcific plaque look like?
-\f1\fs24 \
-\pard\pardeftab720\li960\fi-960\partightenfactor0
-
-\f0\fs28 \cf0 ->several studies report that there are no big differences between symptomatic and asymptomatic carotid arteries. But current machine learning technology for calcific plaque detection is promising.
-\f1\fs24 \
-\pard\pardeftab720\partightenfactor0
-\cf0 \
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs28 \cf0 List of Working Packages with responsible Students and Completion Dates
-\f1\fs24 \
-
-\f0\fs28 ======================================================================
-\f1\fs24 \
-
-\f0\fs28 * Explore Keras-Unet-collection swin_unet_2d [Jenna] by 2/17
-\f1\fs24 \
-
-\f0\fs28 * Explore Monai-Unet swin_unet_3d [Dhruv] by 2/17
-\f1\fs24 \
-
-\f0\fs28 * Set up chimera environment and obtain access to datasets [Alex] by 2/15
-\f1\fs24 \
-\
-}
