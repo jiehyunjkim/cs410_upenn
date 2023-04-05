@@ -15,7 +15,7 @@ class Util:
     def load(DATAPATH='/raid/mpsych/CACTAS/DATA/ESUS'):
 
         images_file = os.path.join(DATAPATH, 'images.npy')
-        labels_file = os.path.join(DATAPATH, 'labels_new.npy')
+        labels_file = os.path.join(DATAPATH, 'labels.npy')
 
         images = np.load(images_file)
         labels = np.load(labels_file)
