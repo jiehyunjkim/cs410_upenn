@@ -51,14 +51,24 @@ class Util:
             image_data = json.load(fp)
         with open("label_data_v3.json", "r") as fp:
             label_data = json.load(fp)
-        
+
         length = len(images)
-        
-        
-        X_train = images[0:image_data['84']] 
-        y_train = labels[0:label_data['84']]
-        X_val = images[image_data['84']:]
-        y_val = labels[label_data['84']:]
+        num = round(length * 0.8)
+
+        nearest_bigger_value = None
+        for value in image_data.values():
+            if value > num:
+                if nearest_bigger_value is None or value < nearest_bigger_value:
+                    nearest_bigger_value = value
+
+        for keys, val in image_data.items():
+            if val == nearest_bigger_value:
+                key = keys
+
+        X_train = images[0:image_data[key]] 
+        y_train = labels[0:label_data[key]]
+        X_val = images[image_data[key]:]
+        y_val = labels[label_data[key]:]
 
         return X_train, X_val, y_train, y_val
 
