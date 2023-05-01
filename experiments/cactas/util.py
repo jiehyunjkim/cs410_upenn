@@ -20,8 +20,8 @@ class Util:
         images = np.load(images_file)
         labels = np.load(labels_file)
 
-        images = images.reshape(images.shape[0],images.shape[1],images.shape[2],1)
-        labels = labels.reshape(labels.shape[0],labels.shape[1],labels.shape[2],1)
+        images = images.reshape(images.shape[0], images.shape[1],images.shape[2], 1)
+        labels = labels.reshape(labels.shape[0], labels.shape[1],labels.shape[2], 1)
 
         return images, labels
   
@@ -53,7 +53,7 @@ class Util:
             label_data = json.load(fp)
 
         length = len(images)
-        num = round(length * 0.8)
+        num = round(length * (1 - val_size))
 
         nearest_bigger_value = None
         for value in image_data.values():
@@ -76,6 +76,49 @@ class Util:
     def split_2(images, labels, val_size=0.2):
 
         X_train, X_val, y_train, y_val = train_test_split(images, labels, test_size=val_size, random_state=0)
+
+        return X_train, X_val, y_train, y_val
+    
+    def split_3(images, labels, val_size=0.15):
+        
+        with open("symp_data.json", "r") as fp:
+            symp_data = json.load(fp)
+        with open("asymp_data.json", "r") as fp:
+            asymp_data = json.load(fp)
+
+        diffs = []
+        prev_val = None
+        for key in sorted(symp_data.keys(), key=int):
+            val = symp_data[key]
+            if prev_val is not None:
+                diff = val - prev_val
+                diffs.append(diff)
+            prev_val = val
+
+
+        symp_list = [711]
+        result = 711
+        for i in diffs:
+            result += i
+            symp_list.append(result)
+
+        values = list(asymp_data.values()) + symp_list
+
+        length = images.shape[0]
+        num = round(length * (1 - val_size))
+
+        nearest_bigger_value = None
+        for value in values:
+            if value > num:
+                if nearest_bigger_value is None or value < nearest_bigger_value:
+                    nearest_bigger_value = value
+
+        index = values.index(nearest_bigger_value) 
+
+        X_train = images[0:values[index]] 
+        y_train = labels[0:values[index]]
+        X_val = images[values[index]:]
+        y_val = labels[values[index]:]
 
         return X_train, X_val, y_train, y_val
 
@@ -149,10 +192,60 @@ class Util:
         loss, iou, iou_thresholded = model.evaluate(X_val, y_val)
         
         #return loss, iou, iou_thresholded
-    
-    
-    
-    
-    
-    
-    
+        
+    def boxplot(all_data, labels, y_label='Time [s]', y_lim_min=0, y_lim=1000, 
+        title=None, outputdir='/home/jiehyun.kim001/CACTAS/_EXPERIMENTS/'):
+        matplotlib.rcParams.update({'font.size': 32})
+        plt.rc('axes', labelsize=65)    # fontsize of the x and y labels
+        plt.rc('legend', fontsize=32)   
+        plt.rc('xtick', labelsize=42) 
+
+        # fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=1, figsize=(9, 4))
+        fig = plt.figure(figsize=(7, 13))
+        ax = fig.gca()
+        # ax1 = plt.gcf()
+        boxprops = dict(color="black",linewidth=1.5)
+        medianprops = dict(color="black",linewidth=1.5)
+        # rectangular box plot
+        bplot1 = plt.boxplot(all_data,
+                             vert=True,  # vertical box alignment
+                             patch_artist=True,  # fill with color
+                             labels=labels,
+                             boxprops=boxprops,
+                             medianprops=medianprops)  # will be used to label x-ticks
+
+        # fill with colors
+        colors = ['#af8dc3', '#7fbf7b']
+        # for bplot in (bplot1, bplot2):
+        for patch, color in zip(bplot1['boxes'], colors):
+            patch.set_facecolor(color)
+
+        ax.set_ylabel(y_label)
+        ax.set_ylim(y_lim_min,y_lim)
+
+        titleb = title
+        if not title:
+            titleb = 'figure.pdf'
+
+        filename_pdf = outputdir+'/'+titleb.replace(' ','_').replace(',','')+'.pdf'
+        filename_png = outputdir+'/'+titleb.replace(' ','_').replace(',','')+'.png'
+        plt.savefig(filename_pdf,bbox_inches='tight')
+        plt.savefig(filename_png,bbox_inches='tight')
+
+        if title:
+            plt.title(title)
+
+        plt.show()
+
+        print(labels[0], np.mean(all_data[0]),'+/-', np.std(all_data[0]))
+        print(labels[1], np.mean(all_data[1]),'+/-', np.std(all_data[1]))
+
+        ttest = stats.ttest_ind(all_data[0],all_data[1])
+
+        print('t_'+str(len(all_data[0]+all_data[1])), '=', str(round(ttest[0],3)), ',p=',str(round(ttest[1],2)))
+
+
+
+
+
+
