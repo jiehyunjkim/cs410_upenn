@@ -73,7 +73,7 @@ class Util:
         return X_train, X_val, y_train, y_val
 
   
-    def split_2(images, labels, val_size=0.20):
+    def split_2(images, labels, val_size=0.2):
 
         X_train, X_val, y_train, y_val = train_test_split(images, labels, test_size=val_size, random_state=0)
 
@@ -88,69 +88,37 @@ class Util:
 
         diffs = []
         prev_val = None
-        for key in sorted(asymp_data.keys(), key=int):
-            val = asymp_data[key]
+        for key in sorted(symp_data.keys(), key=int):
+            val = symp_data[key]
             if prev_val is not None:
                 diff = val - prev_val
                 diffs.append(diff)
             prev_val = val
 
 
-        new_list = [713]
-        result = 713
+        symp_list = [711]
+        result = 711
         for i in diffs:
             result += i
-            new_list.append(result)
-            
-        new_list.append(1425)
-        new_list_2 = list(asymp_data.values()) + new_list
+            symp_list.append(result)
 
-        diffs = []
-        pre_val = None
-        for key in sorted(symp_data.keys(), key=int):
-            val = symp_data[key]
-            if pre_val is not None:
-                diff = val - pre_val
-                diffs.append(diff)
-            pre_val = val
-            
-        result = 1426
-        for i in diffs:
-            result += i
-            new_list_2.append(result)
-            
-        new_list_2.append(2129)
-        
-        diffs = []
-        pr_val = None
-        for key in sorted(symp_data.keys(), key=int):
-            val = symp_data[key]
-            if pr_val is not None:
-                diff = val - pr_val
-                diffs.append(diff)
-            pr_val = val
-        
-        result = 2130
-        for i in diffs:
-            result += i
-            new_list_2.append(result)
-            
-        val_size = 0.15
+        values = list(asymp_data.values()) + symp_list
+
         length = images.shape[0]
         num = round(length * (1 - val_size))
-        
+
         nearest_bigger_value = None
-        for value in new_list_2:
+        for value in values:
             if value > num:
                 if nearest_bigger_value is None or value < nearest_bigger_value:
                     nearest_bigger_value = value
-                    
-        index = new_list_2.index(nearest_bigger_value)
-        
-        X_train = images[0:new_list_2[index]] 
-        y_train = labels[0:new_list_2[index]]
-        X_val = images[new_list_2[index]:]
-        y_val = labels[new_list_2[index]:]
+
+        index = values.index(nearest_bigger_value) 
+
+        X_train = images[0:values[index]] 
+        y_train = labels[0:values[index]]
+        X_val = images[values[index]:]
+        y_val = labels[values[index]:]
 
         return X_train, X_val, y_train, y_val
 
@@ -226,7 +194,9 @@ class Util:
         #return loss, iou, iou_thresholded
         
     def boxplot(all_data, labels, y_label='Time [s]', y_lim_min=0, y_lim=1000, 
-        title=None, outputdir='/home/jiehyun.kim001/CACTAS/_EXPERIMENTS/'):
+        title=None, outputdir='/home/jiehyun.kim001/CACTAS/_EXPERIMENTS/', y_zoom=None):
+     
+        
         matplotlib.rcParams.update({'font.size': 32})
         plt.rc('axes', labelsize=65)    # fontsize of the x and y labels
         plt.rc('legend', fontsize=32)   
@@ -254,6 +224,9 @@ class Util:
 
         ax.set_ylabel(y_label)
         ax.set_ylim(y_lim_min,y_lim)
+        # Set y-axis limits if y_zoom parameter is provided
+        if y_zoom:
+            ax.set_ylim(*y_zoom)
 
         titleb = title
         if not title:
