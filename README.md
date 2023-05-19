@@ -59,4 +59,4 @@ image of 2d unet/swinunetr/RF
 An example of running manual features and what its output looks like can be found here.
 
 ## License 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jiehyunjkim/cs410_upenn/blob/master/LICENSE.md) file for details.
