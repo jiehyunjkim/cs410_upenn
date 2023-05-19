@@ -28,9 +28,9 @@ Fork our github repository
 git clone [ssh address] [local directory]
 ```
 
-Open the terminal:\
+Open the terminal: \
 
-Install conda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html\
+Install conda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html \
 
 From terminal, go to your local github fork directory and run the following steps. 
 To create the environment necessary to run the program:
