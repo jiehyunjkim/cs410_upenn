@@ -55,7 +55,7 @@ At this point, you should have access to all the program files, visible within t
 
 ## Examples
 image of 2d unet/swinunetr/RF<br/>
-![image](https://drive.google.com/file/d/1_dJ1mKtbxw2RwG6fSvnVBvIOrn6HscQy)<br/>
+![image](https://drive.google.com/uc?id=1_dJ1mKtbxw2RwG6fSvnVBvIOrn6HscQy)<br/>
 An example of running manual features and what its output looks like can be found [here](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/manual_features_videotest.ipynb).<br/>
 
 ## License 
