@@ -11,7 +11,7 @@ Table of Contents
 
 
 ## Software Information
-Software Name: CACTAS Program\
+Software Name: CACTAS Program<br/>
 Latest Software Version: v.1.0
 
 ## Project Overview
@@ -30,7 +30,7 @@ git clone [ssh address] [local directory]
 
 Open the terminal:<br/>
 
-Install conda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html \
+Install conda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html<br/>
 
 From terminal, go to your local github fork directory and run the following steps. 
 To create the environment necessary to run the program:
