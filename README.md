@@ -70,6 +70,7 @@ Random Forest: <br/>
 <img src="https://drive.google.com/uc?id=1lp7lJ43KiYIL7VYEMZF0UQvTIMJ-vhoO"
      alt="RF"
      style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
+     
 An example of running manual features and what its output looks like can be found [here](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/manual_features_videotest.ipynb).<br/>
 
 ## License 
