@@ -56,6 +56,10 @@ At this point, you should have access to all the program files, visible within t
 
 ## Usage
 
+Image segmentation: (filename)<br/>
+Risk estimation: (filename)<br/>
+Manual Features: [upenn_plaque_features_oo_v1.py](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/upenn_plaque_features_oo_v1.py)<br/>
+
 ## Examples
 Here is an example of output of 2D UNet: <br/>
 <img src="https://drive.google.com/uc?id=1_dJ1mKtbxw2RwG6fSvnVBvIOrn6HscQy"
