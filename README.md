@@ -55,7 +55,7 @@ At this point, you should have access to all the program files, visible within t
 
 ## Examples
 Here is an example of output of 2D UNet: <br/>
-<img src="https://drive.google.com/uc?id=1tsgkhI03a7O00HDZMKX2u30dbJuTdh6V"
+<img src="https://drive.google.com/uc?id=1_dJ1mKtbxw2RwG6fSvnVBvIOrn6HscQy"
      alt="unet_result"
      style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
 Here is an example of output of 2D Swin UNETR: <br/>
