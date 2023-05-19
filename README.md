@@ -4,6 +4,7 @@
 * [Software Information](#software-information)
 * [Project Overview](#project-overview)
 * [Installation](#installation)
+* [Usage](#usage)
 * [Examples](#examples)
 * [License](#license)
 
@@ -52,6 +53,8 @@ jupyter notebook
 ```
 
 At this point, you should have access to all the program files, visible within the Jupyter Notebook environment, where you can also run them.
+
+## Usage
 
 ## Examples
 Here is an example of output of 2D UNet: <br/>
