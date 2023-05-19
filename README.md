@@ -28,7 +28,7 @@ Fork our github repository
 git clone [ssh address] [local directory]
 ```
 
-Open the terminal: \
+Open the terminal:<br/>
 
 Install conda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html \
 
