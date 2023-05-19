@@ -56,9 +56,12 @@ At this point, you should have access to all the program files, visible within t
 
 ## Usage
 
-Image segmentation: (filename)<br/>
-Risk estimation: (filename)<br/>
-Manual Features: [upenn_plaque_features_oo_v1.py](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/upenn_plaque_features_oo_v1.py)<br/>
+**Image segmentation:** [2D UNet] (https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/keras_2d_unet_usingAPI_v1.ipynb)<br/>
+[2D Swin UNETR]()<br/>
+[3D Swin UNETR]()<br/>
+**Risk estimation:** [Random Forest]()<br/>
+[CNN]()<br/>
+**Manual Features:** [upenn_plaque_features_oo_v1.py](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/upenn_plaque_features_oo_v1.py)<br/>
 
 ## Examples
 Here is an example of output of 2D UNet: <br/>
