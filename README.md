@@ -1,7 +1,3 @@
-# cs410_upenn
-
-Table of Contents
-
 ## Table of Contents
 * [Software Information](#software-information)
 * [Project Overview](#project-overview)
@@ -30,7 +26,7 @@ git clone [ssh address] [local directory]
 
 Open the terminal:<br/>
 
-**Install conda :** https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html<br/>
+**Install conda:** https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html<br/>
 
 From terminal, go to your local github fork directory and run the following steps. 
 To create the environment necessary to run the program:
