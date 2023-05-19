@@ -19,7 +19,7 @@ The goal of our project is to design a program that can characterize qualitative
 
 ## Installation
 
-**Data:** <br/> Change the DATAPATH at experiments - cactus- util.py - load() - DATAPATH to your own local directory. The npy file should be 512 by 512 size.
+**Data:** <br/> Change the DATAPATH at ```experiments - cactus- util.py - load() - DATAPATH``` to your own local directory. The npy file should be 512 by 512 size.
 
 Fork our github repository 
 ```
