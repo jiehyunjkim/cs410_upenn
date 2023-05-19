@@ -23,7 +23,7 @@ The goal of our project is to design a program that can characterize qualitative
 
 Fork our github repository 
 ```
-git clone [ssh address] [local directory]
+git clone git@github.com:jiehyunjkim/cs410_upenn.git [local directory]
 ```
 
 Open the terminal:<br/>
