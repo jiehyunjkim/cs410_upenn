@@ -55,10 +55,11 @@ At this point, you should have access to all the program files, visible within t
 
 ## Examples
 Here is an example of output of 2D UNet: <br/>
-<img src="https://drive.google.com/uc?id=1_dJ1mKtbxw2RwG6fSvnVBvIOrn6HscQy"
-     alt="unet_metrics"
-     style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
 <img src="https://drive.google.com/uc?id=1tsgkhI03a7O00HDZMKX2u30dbJuTdh6V"
+     alt="unet_result"
+     style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
+Here is an example of output of 2D Swin UNETR: <br/>
+<img src="https://drive.google.com/uc?id=1PRS8ZBuPxTA7uaLFgKA82vwgInwAGNbg"
      alt="unet_result"
      style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
 An example of running manual features and what its output looks like can be found [here](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/manual_features_videotest.ipynb).<br/>
