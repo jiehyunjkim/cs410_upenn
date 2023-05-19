@@ -60,7 +60,7 @@ Here is an example of output of 2D UNet: <br/>
      style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
 Here is an example of output of 2D Swin UNETR: <br/>
 <img src="https://drive.google.com/uc?id=1PRS8ZBuPxTA7uaLFgKA82vwgInwAGNbg"
-     alt="unet_result"
+     alt="swinunet_result"
      style="display: block; margin-right: auto; margin-left: auto; width: 40%;" /><br/>
 An example of running manual features and what its output looks like can be found [here](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/manual_features_videotest.ipynb).<br/>
 
