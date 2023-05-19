@@ -54,9 +54,9 @@ jupyter notebook
 At this point, you should have access to all the program files, visible within the Jupyter Notebook environment, where you can also run them.
 
 ## Examples
-image of 2d unet/swinunetr/RF
-![image](address)
-An example of running manual features and what its output looks like can be found here.
+image of 2d unet/swinunetr/RF<br/>
+![image](address)<br/>
+An example of running manual features and what its output looks like can be found [here](https://github.com/jiehyunjkim/cs410_upenn/blob/master/experiments/manual_features_videotest.ipynb).<br/>
 
 ## License 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/jiehyunjkim/cs410_upenn/blob/master/LICENSE.md) file for details.
