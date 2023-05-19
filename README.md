@@ -19,12 +19,12 @@ The goal of our project is to design a program that can characterize qualitative
 
 ## Installation
 
-**Data:** <br/> Change the DATAPATH at ```experiments - cactus- util.py - load() - DATAPATH``` to your own local directory. The size of npy file should be 512 by 512.
-
-Fork our github repository 
+**Fork our github repository:**
 ```
 git clone git@github.com:jiehyunjkim/cs410_upenn.git [local directory]
 ```
+
+**Data:** <br/> Change the DATAPATH at ```experiments - cactus- util.py - load() - DATAPATH``` to your own local directory. The size of npy file should be 512 by 512.
 
 Open the terminal:<br/>
 
